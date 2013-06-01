@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+>
+<TableLayout android:id="@+id/details"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_alignParentBottom="true"
+android:stretchColumns="1"
+>
+<TableRow>
+<TextView android:text="nome:" />
+<EditText android:id="@+id/name" />
+</TableRow>
+<TableRow>
+<TextView android:text="Address:" />
+<EditText android:id="@+id/addr" />
+</TableRow>
+<TableRow>
+<TextView android:text="Type:" />
+<RadioGroup android:id="@+id/types">
+
+<RadioButton
+    android:id="@+id/take_out"
+    android:text="sciamano" />
+
+<RadioButton android:id="@+id/sit_down"
+android:text="Sit-Down"
+/>
+
+<TextView
+    android:id="@+id/textView1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:inputType="number"
+    android:text="lista bbbbb"
+    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+<EditText
+    android:id="@+id/editText4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:ems="10"
+    android:inputType="number" />
+
+</RadioGroup>
+</TableRow>
+
+<EditText
+    android:id="@+id/editText1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:inputType="number" >
+
+    <requestFocus />
+</EditText>
+
+<EditText
+    android:id="@+id/editText3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:inputType="date" />
+
+<EditText
+    android:id="@+id/editText2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:inputType="date" />
+
+<Button android:id="@+id/save"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Save"
+/>
+</TableLayout>
+
+<ListView
+    android:id="@+id/restaurants"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/details"
+    android:layout_alignParentTop="true" 
+     />
+
+</LinearLayout>
+
+   
