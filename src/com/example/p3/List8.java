@@ -34,7 +34,7 @@ public class List8 extends ListActivity {
         // Use an existing ListAdapter that will map an array
         // of strings to TextViews
         setListAdapter(new ArrayAdapter<String>(this,
-        		R.layout.list8_item, mStrings));
+        		android.R.layout.select_dialog_multichoice, mStrings));
         getListView().setTextFilterEnabled(true);
     }
 

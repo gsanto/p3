@@ -24,17 +24,18 @@ public Cursor mCursor;
         // requerying or closing it as the activity changes state.
         mCursor = this.getContentResolver().query(People.CONTENT_URI, null, null, null, null);
         startManagingCursor(mCursor);
-        String[] mStrings = C1.sC1;
+        String[] mS2 = C1.sC1;
         // Now create a new list adapter bound to the cursor.
         // SimpleListAdapter is designed for binding to a Cursor.
         ListAdapter adapter = new SimpleCursorAdapter(
                 this, // Context.
                 R.layout.list8_item ,  // Specify the row template to use (here, two columns bound to the two retrieved cursor rows).
                 mCursor,                                              // Pass in the cursor to bind to.
-                new String[] {People.NUMBER_KEY , People.NAME},           // Array of cursor columns to bind to.
-                new int[] {R.id.text2, R.id.text1});  // Parallel array of which template objects to bind to those columns.
+                new String[] {People._ID , People.NAME, People._ID },           // Array of cursor columns to bind to.
+                new int[] {R.id.text2, R.id.text1, R.id.TextView01});  // Parallel array of which template objects to bind to those columns.
 
         // Bind to our new adapter.
         setListAdapter(adapter);
     }
+    private String[] mS1 = C1.sC1;
 }

@@ -1,5 +1,7 @@
 package com.example.p3;
 
+
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,10 +18,10 @@ public class CreateTodo extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		setContentView(R.layout.contacts_list);
-		//setTitle(R.string.create_todo);
+		setContentView(R.layout.create_todo);
+		setTitle(R.string.create_todo);
 
-		nameText = (EditText) findViewById(R.id.TextView01);
+		nameText = (EditText) findViewById(R.id.name);
 
 		Bundle extras = getIntent().getExtras();
 		if (extras != null) {
@@ -31,9 +33,9 @@ public class CreateTodo extends Activity {
 			}
 		}
 
-		Button confirmButton = (Button) findViewById(R.id.button2);
-				confirmButton.setOnClickListener(new View.OnClickListener() {
-				public void onClick(View view) {
+		Button confirmButton = (Button) findViewById(R.id.confirm);
+		confirmButton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View view) {
 				Bundle bundle = new Bundle();
 				bundle.putString("name", nameText.getText().toString());
 				bundle.putInt("position", position);

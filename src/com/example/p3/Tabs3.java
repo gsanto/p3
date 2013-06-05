@@ -31,6 +31,7 @@ public class Tabs3 extends TabActivity {
         super.onCreate(savedInstanceState);
 
         final TabHost tabHost = getTabHost();
+        tabHost.setBackgroundColor(getTitleColor());
 
         tabHost.addTab(tabHost.newTabSpec("tab1")
                 .setIndicator("schedine disponibili")
@@ -40,7 +41,7 @@ public class Tabs3 extends TabActivity {
 
         tabHost.addTab(tabHost.newTabSpec("tab2")
                 .setIndicator("schedine acquistate")
-                .setContent(new Intent(this, List8.class)));
+                .setContent(new Intent(this, ToDoListActivity.class)));
                 
         
         // This tab sets the intent flag so that it is recreated each time

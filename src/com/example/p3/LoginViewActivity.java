@@ -96,7 +96,7 @@ public class LoginViewActivity extends Activity {
     Parse.initialize(this, applicationId, clientKey);
     ParseTwitterUtils.initialize(twitterConsumerKey, twitterConsumerSecret);
 
-    setContentView(R.layout.main);
+    setContentView(R.layout.info);
 
     ((Button) findViewById(R.id.login)).getBackground().setColorFilter(Color.parseColor("#50B52D"), Mode.SRC_ATOP);
     ((Button) findViewById(R.id.facebook)).getBackground().setColorFilter(Color.parseColor("#005EFF"), Mode.SRC_IN);

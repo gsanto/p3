@@ -4,16 +4,9 @@
         android:layout_height="fill_parent"
         android:orientation="horizontal" >
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="114dp"
-            android:layout_height="62dp"
-            android:layout_weight="0.54"
-            android:text="Bye" />
-
         <TextView
-            android:id="@+id/textView1"
-            android:layout_width="164dp"
+            android:id="@+id/TextView"
+            android:layout_width="match_parent"
             android:layout_height="51dp"
             android:hint="@string/accessibility_custom_off"
             android:text="@string/accessibility_custom_on" />
