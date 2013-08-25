@@ -1,0 +1,27 @@
+private ArrayList<YourObjectType> list;
+
+public void done(List<ParseObject> objects, ParseException e) {
+            if (objects == null || objects.size() == 0) {
+                return; //no objects
+            }
+                list = new ArrayList<YourObjectType>();
+            for (int i = 0; i < objects.size(); i++) {
+
+
+                    YourObjectType myObject = new YourObjectType();
+                    ParseObject object = objects.get(i);
+
+                    myObject.objectId = object.getObjectId();
+                    myObject.names = object.get("Names");
+                    myObject.owners = object.get("owners");
+                    myObject.users = object.get("users");
+                    list.add(myObject);
+
+
+            }
+
+
+
+      adapter = new ArrayAdapter<YourObjectType>(MyActivity.this,android.R.layout.simple_list_item_1, MyList);
+      listDev.setAdapter(adapter);
+        }
