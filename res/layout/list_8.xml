@@ -54,10 +54,14 @@
             android:drawSelectorOnTop="false" />
         
         <!-- Here is the view to show if the list is emtpy -->
-        <TextView android:id="@+id/empty"
-            android:layout_width="match_parent" 
+
+        <TextView
+            android:id="@+id/empty"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/list_8_no_photos"/>
+            android:clickable="true"
+            android:onClick="showZetaDialog(Wiew)"
+            android:text="@string/list_8_no_photos" />
             
     </FrameLayout>
         

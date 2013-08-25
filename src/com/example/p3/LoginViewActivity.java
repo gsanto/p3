@@ -16,6 +16,8 @@
 
 package com.example.p3;
 
+import java.util.Date;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.graphics.Color;
@@ -25,6 +27,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
 import com.parse.LogInCallback;
 import com.parse.Parse;
 import com.parse.ParseException;
@@ -33,7 +37,9 @@ import com.parse.ParseTwitterUtils;
 import com.parse.ParseUser;
 
 public class LoginViewActivity extends Activity {
-
+	public   int countlog;
+	public static String currentUser;
+	public String date1;
   /**
    * Parse app client key
    */
@@ -85,7 +91,7 @@ public class LoginViewActivity extends Activity {
   }
 
   private LoginListener listener;
-
+  
   /**
    * Called when the activity is first created.
    */
@@ -151,13 +157,21 @@ public class LoginViewActivity extends Activity {
 	    ParseUser.logInInBackground(getLoginUserName(), getLoginPwd(), new LogInCallback() {
 	      public void done(ParseUser user, ParseException e) {
 	        dialog.dismiss();
-	        ParseObject testObject = new ParseObject("FIELD1");
+	        user.increment("CountLog");
+	        user.saveInBackground();
+	        //date1 = 66;
+	        //date1 = user.getDate("updatedAt").toString();
+	        //ParseUser.create("aaaProduct000");
+	        ParseObject testObject = new ParseObject("Field1");
+	        countlog = 553;
 	        if (user != null) {
-	        	Log.d("Login", "User logged in 111.");
-	        	
+	        	currentUser = getLoginUserName();
 	    		testObject.put("log1", "ok user 333 bar");
-	    		testObject.put("log2", "ok user 333 bar");
-	    		
+	    		testObject.put("userLog", getLoginUserName());
+	    		testObject.put("countLog", countlog);
+	    		Log.w("Login", "User logged: "+ currentUser + " access " + user.getInt("CountLog"));
+	        	
+	    		//testObject.put("log2", 1);
 	          //listener.onSignin("native", user);
 	        } else {
 	        	Log.d("Login", "No such user");
@@ -165,6 +179,8 @@ public class LoginViewActivity extends Activity {
 	    		testObject.put("log2", "no such user");
 	          //listener.onError("native", e);
 	        }
+	        Toast.makeText(getApplicationContext(), "Last access " + user.getInt("CountLog"), Toast.LENGTH_LONG).show();
+	        
 	      testObject.saveInBackground();  
 	      }
 	    });

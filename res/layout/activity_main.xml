@@ -42,26 +42,40 @@
                 <LinearLayout
                     android:id="@+id/tab1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:clickable="true"
+                    android:longClickable="true"
+                    android:onClick="showZetaDialog"
+                    android:orientation="horizontal" >
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:orientation="horizontal" >
+
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/tab3"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:orientation="horizontal" >
+
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/tab4"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:orientation="horizontal" >
+
                 </LinearLayout>
             </FrameLayout>
 

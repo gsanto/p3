@@ -36,16 +36,11 @@
         <activity android:name=".CreateTodo" >
         </activity>
         <activity android:name=".ToDoListApplication" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+           
         </activity>
         <activity
             android:name=".LoginViewActivity" >
-                
-            </activity>
+        </activity>
     </application>
 
 </manifest>

@@ -22,7 +22,7 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Schedine disponibili" />
+        android:text="Save to remote" />
 
     <ToggleButton
         android:id="@+id/toggleButton1"

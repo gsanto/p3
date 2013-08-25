@@ -3,7 +3,13 @@
     android:id="@+id/TableLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#a0fff0" >
+    android:animateLayoutChanges="false"
+    android:background="#a0fff0"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:longClickable="true"
+    android:onClick="showZetaDialog" >
 
     <TextView
         android:layout_width="wrap_content"
@@ -11,7 +17,7 @@
         android:layout_marginLeft="10sp"
         android:text="Free to win 1 (VINTA)"
         android:textAppearance="?android:attr/textAppearanceMediumInverse"
-        android:textSize="25dip" />
+        android:textSize="25sp" />
 
     <TableRow
         android:id="@+id/tableRow1"
@@ -84,9 +90,13 @@
             android:layout_gravity="right"
             android:layout_marginLeft="35sp"
             android:background="#00ff00"
+            android:ellipsize="middle"
             android:focusableInTouchMode="true"
-            android:text="FREE"
-            android:textSize="30sp" />
+            android:hint="udr"
+            android:text=" FREE "
+            android:textSize="30sp"
+            android:textStyle="normal|bold|italic"
+            android:typeface="sans" />
 
     </TableRow>
 
@@ -150,6 +160,7 @@
             android:id="@+id/TextView01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:clickable="true"
             android:text="20€"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#000000" />

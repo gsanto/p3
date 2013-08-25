@@ -29,10 +29,12 @@ public class Tabs3 extends TabActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        
+        //final TabWidget tabW = getTabWidget();
+        
         final TabHost tabHost = getTabHost();
-        tabHost.setBackgroundColor(getTitleColor());
-
+        tabHost.setBackgroundColor(1230);//getTitleColor());
+        //tabHost.
         tabHost.addTab(tabHost.newTabSpec("tab1")
                 .setIndicator("schedine disponibili")
                 

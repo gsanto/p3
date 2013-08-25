@@ -17,7 +17,7 @@
 package com.example.p3;
 
 
-public class Cheeses {
+public class C2 {
 
     public static final String[] sCheeseStrings = {
             "Free to win 1 (VINTA) autore: Expert Team", "Free to win 2 (VINTA) autore: Expert Team", "7 e 1/2 con la matta (VINTA) autore: Expert Team", "Il furto 2 (VINTA) autore: Expert Team", "Free to win 3 (VINTA) autore: Expert Team",
@@ -25,5 +25,16 @@ public class Cheeses {
             "7 e 1/2 con la matta (VINTA) autore: Expert Team", "Il furto 2 (VINTA) autore: Expert Team",
             "Free to win 3 (VINTA) autore: Expert Team"
     };
-
+    public static String[] zStrings = {
+        "0", "1", "2", "3", "4",
+        "5", "6",
+        "7", "8","9", "10",
+        "11"
+};
+    public  static String[] zDataInizio = {
+        "d0", "d1", "d2", "d3", "d4",
+        "d5", "d6",
+        "d7", "d8","d9", "d10",
+        "d11"
+};
 }
